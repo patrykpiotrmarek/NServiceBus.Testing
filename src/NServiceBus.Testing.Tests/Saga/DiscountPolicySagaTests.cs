@@ -1,4 +1,4 @@
-﻿namespace NServiceBus.Testing.Tests.Saga
+﻿namespace NServiceBus_6.Testing.Tests.Saga
 {
     using System;
     using System.Threading.Tasks;
@@ -134,7 +134,7 @@
                 .When<SubmitOrder>(s => s.Handle, m => m.Total = total);
         }
 
-        public class DiscountPolicy : NServiceBus.Saga<DiscountPolicyData>,
+        public class DiscountPolicy : NServiceBus_6.Saga<DiscountPolicyData>,
             IAmStartedByMessages<SubmitOrder>,
             IHandleTimeouts<SubmitOrder>
         {

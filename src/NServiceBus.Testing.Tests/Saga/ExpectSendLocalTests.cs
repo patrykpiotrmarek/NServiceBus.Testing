@@ -1,4 +1,4 @@
-﻿namespace NServiceBus.Testing.Tests.Saga
+﻿namespace NServiceBus_6.Testing.Tests.Saga
 {
     using System.Threading.Tasks;
     using NUnit.Framework;
@@ -22,7 +22,7 @@
                 .WhenHandling<SendLocalSaga.RequestNotSendLocal>();
         }
 
-        public class SendLocalSaga : NServiceBus.Saga<SendLocalSaga.SendLocalSagaData>,
+        public class SendLocalSaga : NServiceBus_6.Saga<SendLocalSaga.SendLocalSagaData>,
             IHandleMessages<SendLocalSaga.RequestSendLocal>,
             IHandleMessages<SendLocalSaga.RequestNotSendLocal>
         {

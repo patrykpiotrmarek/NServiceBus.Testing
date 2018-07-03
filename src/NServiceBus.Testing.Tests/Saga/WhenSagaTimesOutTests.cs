@@ -1,4 +1,4 @@
-﻿namespace NServiceBus.Testing.Tests.Saga
+﻿namespace NServiceBus_6.Testing.Tests.Saga
 {
     using System;
     using System.Threading.Tasks;
@@ -64,7 +64,7 @@
         }
     }
 
-    public class TimeoutSaga : NServiceBus.Saga<TimeoutSaga.TimeoutData>,
+    public class TimeoutSaga : NServiceBus_6.Saga<TimeoutSaga.TimeoutData>,
         IHandleMessages<TimeoutSaga.StartMessage>,
         IHandleTimeouts<TimeoutSaga.TimeoutMessage1>,
         IHandleTimeouts<TimeoutSaga.TimeoutMessage2>,

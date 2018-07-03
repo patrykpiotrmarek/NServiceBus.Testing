@@ -1,4 +1,4 @@
-﻿namespace NServiceBus.Testing
+﻿namespace NServiceBus_6.Testing
 {
     abstract class ExpectInvocation
     {

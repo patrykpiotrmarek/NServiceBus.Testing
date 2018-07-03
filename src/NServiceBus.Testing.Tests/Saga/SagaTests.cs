@@ -1,4 +1,4 @@
-﻿namespace NServiceBus.Testing.Tests.Saga
+﻿namespace NServiceBus_6.Testing.Tests.Saga
 {
     using System;
     using System.Threading.Tasks;
@@ -150,7 +150,7 @@
         public string String { get; set; }
     }
 
-    public class MySagaWithInterface : NServiceBus.Saga<MySagaWithInterface.MySagaDataWithInterface>,
+    public class MySagaWithInterface : NServiceBus_6.Saga<MySagaWithInterface.MySagaDataWithInterface>,
         IAmStartedByMessages<StartsSagaWithInterface>
     {
         public async Task Handle(StartsSagaWithInterface message, IMessageHandlerContext context)
@@ -170,7 +170,7 @@
         }
     }
 
-    public class MySaga : NServiceBus.Saga<MySagaData>,
+    public class MySaga : NServiceBus_6.Saga<MySagaData>,
         IAmStartedByMessages<StartsSaga>,
         IHandleTimeouts<StartsSaga>
     {
@@ -222,7 +222,7 @@
     {
     }
 
-    public class CustomSaga<TMessage, TSagaData> : NServiceBus.Saga<TSagaData>, IHandleMessages<TMessage> where TSagaData : IContainSagaData, new()
+    public class CustomSaga<TMessage, TSagaData> : NServiceBus_6.Saga<TSagaData>, IHandleMessages<TMessage> where TSagaData : IContainSagaData, new()
     {
         public Func<TMessage, IMessageHandlerContext, TSagaData, Task> HandlerAction { get; set; }
 
@@ -237,7 +237,7 @@
     }
 
     public class MessageHierarchySaga :
-        NServiceBus.Saga<MySagaData>,
+        NServiceBus_6.Saga<MySagaData>,
         IAmStartedByMessages<BaseClassMessage>,
         IAmStartedByMessages<BaseClassImplementingMessage>
     {

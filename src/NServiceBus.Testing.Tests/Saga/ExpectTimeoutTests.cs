@@ -1,4 +1,4 @@
-﻿namespace NServiceBus.Testing.Tests.Saga
+﻿namespace NServiceBus_6.Testing.Tests.Saga
 {
     using System;
     using System.Threading.Tasks;
@@ -82,7 +82,7 @@
                 .When((s, c) => s.Handle(new StartMessage(), c));
         }
 
-        public class TimeoutSaga : NServiceBus.Saga<MyTimeoutData>,
+        public class TimeoutSaga : NServiceBus_6.Saga<MyTimeoutData>,
             IAmStartedByMessages<TheMessage>,
             IHandleTimeouts<TheTimeout>
         {
@@ -102,7 +102,7 @@
             }
         }
 
-        class MultipleTimeoutsSaga : NServiceBus.Saga<TimeoutSagaData>,
+        class MultipleTimeoutsSaga : NServiceBus_6.Saga<TimeoutSagaData>,
             IHandleTimeouts<MyTimeout>,
             IHandleTimeouts<MyOtherTimeout>,
             IAmStartedByMessages<StartMessage>

@@ -1,4 +1,4 @@
-﻿namespace NServiceBus.Testing.Tests.Saga
+﻿namespace NServiceBus_6.Testing.Tests.Saga
 {
     using System;
     using System.Threading.Tasks;
@@ -41,7 +41,7 @@
         }
     }
 
-    public class SagaCreation : NServiceBus.Saga<SagaCreation.CreationData>,
+    public class SagaCreation : NServiceBus_6.Saga<SagaCreation.CreationData>,
         IHandleMessages<SagaCreation.NoChangeMessage>,
         IHandleMessages<SagaCreation.ChangeMessage>
     {

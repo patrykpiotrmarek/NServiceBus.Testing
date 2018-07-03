@@ -1,4 +1,4 @@
-﻿namespace NServiceBus.Testing.Tests.Saga
+﻿namespace NServiceBus_6.Testing.Tests.Saga
 {
     using System.Threading.Tasks;
     using NUnit.Framework;
@@ -14,7 +14,7 @@
                 .When((s, c) => s.Handle(new MyRequest(), c));
         }
 
-        public class ReplySaga : NServiceBus.Saga<ReplySaga.SagaThatDoesAReplyData>,
+        public class ReplySaga : NServiceBus_6.Saga<ReplySaga.SagaThatDoesAReplyData>,
         IHandleMessages<MyRequest>
         {
             public Task Handle(MyRequest message, IMessageHandlerContext context)

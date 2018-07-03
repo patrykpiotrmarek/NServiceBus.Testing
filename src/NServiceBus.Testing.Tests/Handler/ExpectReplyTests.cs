@@ -1,4 +1,4 @@
-﻿namespace NServiceBus.Testing.Tests.Handler
+﻿namespace NServiceBus_6.Testing.Tests.Handler
 {
     using System.Threading;
     using Saga;

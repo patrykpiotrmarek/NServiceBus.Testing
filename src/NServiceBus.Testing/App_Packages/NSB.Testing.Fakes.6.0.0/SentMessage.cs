@@ -1,4 +1,4 @@
-namespace NServiceBus.Testing
+namespace NServiceBus_6.Testing
 {
     /// <summary>
     /// Represents an outgoing message. Contains the message itself and it's associated options.

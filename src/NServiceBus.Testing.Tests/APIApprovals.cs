@@ -1,4 +1,4 @@
-﻿namespace NServiceBus.Testing.Tests.API
+﻿namespace NServiceBus_6.Testing.Tests.API
 {
     using System;
     using System.IO;

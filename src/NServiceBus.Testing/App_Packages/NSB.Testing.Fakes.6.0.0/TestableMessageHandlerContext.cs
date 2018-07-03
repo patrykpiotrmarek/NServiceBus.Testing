@@ -1,5 +1,5 @@
 // ReSharper disable PartialTypeWithSinglePart
-namespace NServiceBus.Testing
+namespace NServiceBus_6.Testing
 {
     /// <summary>
     /// A testable implementation of <see cref="IMessageHandlerContext" />.

@@ -1,4 +1,4 @@
-﻿namespace NServiceBus.Testing
+﻿namespace NServiceBus_6.Testing
 {
     using System.Collections.Concurrent;
     using System.Collections.Generic;
@@ -26,9 +26,9 @@
         {
             var headers = options.GetHeaders();
 
-            if (headers.ContainsKey(NServiceBus.Headers.IsSagaTimeoutMessage))
+            if (headers.ContainsKey(NServiceBus_6.Headers.IsSagaTimeoutMessage))
             {
-                if (headers[NServiceBus.Headers.IsSagaTimeoutMessage] == bool.TrueString)
+                if (headers[NServiceBus_6.Headers.IsSagaTimeoutMessage] == bool.TrueString)
                 {
                     timeoutMessages.Enqueue(GetTimeoutMessage(message, options));
                 }
